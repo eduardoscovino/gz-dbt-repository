@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw_data_circle
+    description: raw data circle sportwear from le wagon
+    tables:
+      - name: raw_cc_stock
+        description: sotck of products
+      - name: raw_cc_sales
+        description: sales of product
+        tests:
+          - unique:
+              column_name: "(product_id || '-' date_date)"
